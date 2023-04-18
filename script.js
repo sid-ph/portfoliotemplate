@@ -1,5 +1,7 @@
 const form = document.querySelector('.contact-form');
 const submitButton = document.querySelector('#submit-form');
+console.log(submitButton);
+submitButton.disabled = true;
 const toast = document.querySelector('.toast');
 
 form.addEventListener('submit', function(e) {
