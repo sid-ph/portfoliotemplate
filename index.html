@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contractor Portfolio</title>
+</head>
+<!-- ... Rest of the HTML file ... -->
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#home">Home</a>
+            <a href="#specialization">Specialisation</a>
+            <a href="#how-we-work">Process</a>
+            <a href="#why-choose-us">Why Us</a>
+            <a href="#get-in-touch">Contact Us</a>
+        </div>
+    </header>
+
+
+
+    <div class="overlay">
+        <!-- Home -->
+        <section id="home">
+            <div class="home-content">
+                <div class="home-image">
+                    <img src="construction-site.jpg" alt="Construction Site">
+                </div>
+                <div class="home-info">
+                    <h1 style="margin-bottom: 0;">Tod Fod Jod</h1>
+                    <h1 style="margin-top: 0;">24 Hour Labour</h1>
+                    <p class="highlighted-question">Do you require manpower on an urgent basis?</p>
+                    <p>OR</p>
+                    <p class="highlighted-question">Are you looking for a project to deploy your manpower?</p>
+                    <p>Our team of experts is here to fulfill all your requirements!</p>
+                </div>
+            </div>
+        </section>
+        
+
+
+
+        <!-- ... Other parts of the HTML file ... -->
+
+        <!-- Our Specialization -->
+        <section id="specialization">
+            <h2>Our Specializations</h2>
+            <div class="specialization-grid">
+                <div class="specialization-item">
+                    <img src="bridge-work.jpg" alt="Bridge Work">
+                    <h3>Bridge Work</h3>
+                    <p>Expertise in constructing high-quality and durable bridges.</p>
+                </div>
+                <div class="specialization-item">
+                    <img src="road-work.jpg" alt="Road Work">
+                    <h3>Road Work</h3>
+                    <p>Skilled in building roads that withstand the test of time.</p>
+                </div>
+                <div class="specialization-item">
+                    <img src="building-work.jpg" alt="Building Work">
+                    <h3>Building Work</h3>
+                    <p>Experience in constructing residential and commercial buildings.</p>
+                </div>
+                <div class="specialization-item">
+                    <img src="other-civil-work.jpg" alt="Other Civil Work">
+                    <h3>Other Civil Work</h3>
+                    <p>Providing a range of civil work services for diverse projects.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ... Other parts of the HTML file ... -->
+
+        <!-- How We Work -->
+        <section id="how-we-work">
+            <h2>How We Work</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span>1</span>
+                    </div>
+                    <h3>Requirement Gathering</h3>
+                    <p>We will start with understanding your need of manpower for your project or project for your manpower</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span>2</span>
+                    </div>
+                    <h3>Matching manpower</h3>
+                    <p>We will then find the right match for your requirement</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span>3</span>
+                    </div>
+                    <h3>Execution & Completion</h3>
+                    <p>Post matchmaking, workers will travel to project site and work will begin</p>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <!-- ... Other parts of the HTML file ... -->
+
+        <!-- Why Choose Us -->
+        <section id="why-choose-us">
+            <h2>Why Choose Us</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <h3>Experience</h3>
+                    <p>Our team has years of experience in the construction industry.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Quality</h3>
+                    <p>We deliver high-quality work and adhere to strict quality standards.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Timely Completion</h3>
+                    <p>We complete projects on time, ensuring client satisfaction.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Client Focus</h3>
+                    <p>We prioritize our clients' needs and work closely with them throughout the project.</p>
+                </div>
+            </div>
+        </section>
+        <!-- ... Other parts of the HTML file ... -->
+        <!-- Get in Touch -->
+        <section id="get-in-touch">
+        <h2>Get in Touch</h2>
+        <form class="contact-form" action="https://script.google.com/macros/s/AKfycbxD_fsf_rXnLM5_i2n8dLYI8FPr2gxMWRIFvHRjcXYCSSzHGn1hAZNHfSHz9Tr47d6g/exec" method="post">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            <label for="iam">Role</label>
+            <select id="iam" name="iam" class="dropdown">
+                <option value="" selected>Select an Option</option>
+                <option value="civil-contractor">Civil Contractor</option>
+                <option value="mechanical-contractor">Mechanical Contractor</option>
+                <option value="labour-contractor">Labour Contractor</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="state-city">Location (District and State)</label>
+            <input type="text" id="state-city" name="state-city" placeholder="Share Your Location" required>
+            
+            <label for="requirement">Requirement</label>
+            <select id="requirement" name="requirement" class="dropdown">
+                <option value="" selected>Select a Requirement</option>
+                <option value="labour">Labour/Manpower</option>
+                <option value="contractor">Contractor</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="message">Requirement Details</label>
+            <textarea id="message" name="message" placeholder="Your requirements" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <div class="toast"></div>
+    </section>
+
+        
+        
+        <!-- ... Other parts of the HTML file ... -->
+        <!-- Our Details -->
+        <section id="our-details">
+            <h2>Our Details</h2>
+            <div class="details-grid">
+                <div class="details-item">
+                    
+                    <h3 class="details-title">Name</h3>
+                    <p>BB Joshi</p>
+                </div>
+                <div class="details-item">
+                    
+                    <h3 class="details-title">E-mail</h3>
+                    <p>bb.Joshi73@gmail.com</p>
+                </div>
+                <div class="details-item">
+                    
+                    <h3 class="details-title">Phone Number</h3>
+                    <p>(+91) 93289 50080</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
