@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Contractor Portfolio</title>
+  <link rel="icon" type="image/png" href="icon.png">
 </head>
 <!-- ... Rest of the HTML file ... -->
 
@@ -84,7 +85,7 @@
             <span>1</span>
           </div>
           <h3>Requirement Gathering</h3>
-          <p>We will start with understanding your need of manpower for your project or project for your manpower</p>
+          <p>We will start with understanding your need for the project</p>
         </div>
         <div class="timeline-item">
           <div class="timeline-icon">
@@ -133,9 +134,8 @@
     <!-- Get in Touch -->
     <section id="get-in-touch">
       <h2>Get in Touch</h2>
-      <form class="contact-form"
-        action="https://script.google.com/macros/s/AKfycbxD_fsf_rXnLM5_i2n8dLYI8FPr2gxMWRIFvHRjcXYCSSzHGn1hAZNHfSHz9Tr47d6g/exec"
-        method="post">
+      <form id="contact-form" class="contact-form">
+
 
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -146,7 +146,7 @@
         <label for="phone">Phone Number</label>
         <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
         <label for="iam">Role</label>
-        <select id="iam" name="iam" class="dropdown">
+        <select id="iam" name="Role" class="dropdown">
           <option value="" selected>Select an Option</option>
           <option value="civil-contractor">Civil Contractor</option>
           <option value="mechanical-contractor">Mechanical Contractor</option>
@@ -167,7 +167,7 @@
         <label for="message">Requirement Details</label>
         <textarea id="message" name="message" placeholder="Your requirements" rows="4" required></textarea>
 
-        <button type="submit">Submit</button>
+        <button type="submit" id="submit">Submit</button>
       </form>
       <div class="toast"></div>
     </section>
@@ -196,8 +196,10 @@
         </div>
       </div>
     </section>
+    <footer>
+    <p>Powered by <a href="https://projecthero.in" target="_blank">ProjectHero</a>. Click <a href="tel:+919916288404">here</a> to create your own portfolio website.</p>
+  </footer>
   </div>
   <script src="script.js"></script>
 </body>
-
 </html>

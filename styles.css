@@ -28,7 +28,7 @@ header a {
 }
 
 header a:hover {
-  color: #f1c40f;
+  color: #fdfdfc;
 }
 
 @media (max-width: 1024px) {
@@ -407,16 +407,23 @@ font-weight: 600;
 }
 
 .contact-form input,
-.contact-form textarea {
-width: 100%;
-padding: 0.5rem;
-font-size: 1rem;
-margin-bottom: 1rem;
-border-radius: 5px;
-border: none;
-background-color: rgba(255, 255, 255, 0.1);
-color: #fff;
+.contact-form textarea,
+.contact-form select { /* Add 'select' here */
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
+.contact-form input::placeholder,
+.contact-form textarea::placeholder,
+.contact-form select option[disabled]:first-child { /* Add this rule */
+  color: #fff;
+}
+
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
@@ -497,5 +504,29 @@ background-color: #d4ad12;
   background-color: #fff;
 }
 
+textarea#message {
+    font-family: sans-serif;
+}
 
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
 
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #ccc;
+}
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

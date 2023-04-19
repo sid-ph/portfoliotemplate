@@ -1,40 +1,28 @@
-const form = document.querySelector('.contact-form');
-const submitButton = document.querySelector('#submit-form');
-console.log(submitButton);
-submitButton.disabled = true;
-const toast = document.querySelector('.toast');
+var form = document.querySelector('#contact-form');
+var submitButton = document.querySelector('#submit');
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  var formData = new FormData(form);
+
   submitButton.disabled = true;
-  
-  const formData = new FormData(form);
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://script.google.com/macros/s/AKfycbxD_fsf_rXnLM5_i2n8dLYI8FPr2gxMWRIFvHRjcXYCSSzHGn1hAZNHfSHz9Tr47d6g/exec', true);
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      showSuccessToast();
-    } else {
-      showErrorToast();
+
+  fetch('https://script.google.com/macros/s/AKfycbxD_fsf_rXnLM5_i2n8dLYI8FPr2gxMWRIFvHRjcXYCSSzHGn1hAZNHfSHz9Tr47d6g/exec', {
+    method: 'POST',
+    body: formData
+  })
+  .then(function(response) {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
     }
-    submitButton.disabled = false;
+    alert('Form submitted successfully!');
     form.reset();
-  };
-  xhr.send(formData);
+    submitButton.disabled = false;
+  })
+  .catch(function(error) {
+    console.error('There was a problem with the fetch operation:', error);
+    alert('Sorry, there was an error submitting the form. Please try again later.');
+    submitButton.disabled = false;
+  });
 });
-
-function showSuccessToast() {
-  toast.textContent = 'Form submitted successfully.';
-  toast.classList.add('show');
-  setTimeout(function() {
-    toast.classList.remove('show');
-  }, 3000);
-}
-
-function showErrorToast() {
-  toast.textContent = 'Error submitting form. Please try again later.';
-  toast.classList.add('show');
-  setTimeout(function() {
-    toast.classList.remove('show');
-  }, 3000);
-}
